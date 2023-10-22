@@ -1,0 +1,6 @@
+baseURL = 'https://github.com/jenkaWitzig/blog/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'ananke'
+publishDir = "docs"
+
