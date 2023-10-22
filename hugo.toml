@@ -1,6 +1,6 @@
 baseURL = 'https://jenkawitzig.github.io/blog/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'a tech.stuff blog'
 theme = 'ananke'
 publishDir = "docs"
 
