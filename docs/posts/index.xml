@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>a tech.stuff blog</title>
-    <link>https://jenkawitzig.github.io/blog/</link>
-    <description>Recent content on a tech.stuff blog</description>
+    <title>Posts on a tech.stuff blog</title>
+    <link>https://jenkawitzig.github.io/blog/posts/</link>
+    <description>Recent content in Posts on a tech.stuff blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Oct 2023 17:09:14 +0200</lastBuildDate><atom:link href="https://jenkawitzig.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Oct 2023 17:09:14 +0200</lastBuildDate><atom:link href="https://jenkawitzig.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Examplepost2</title>
       <link>https://jenkawitzig.github.io/blog/posts/examplepost2/</link>
