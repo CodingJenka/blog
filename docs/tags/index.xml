@@ -3,8 +3,12 @@
   <channel>
     <title>Tags on a tech.stuff blog</title>
     <link>https://jenkawitzig.github.io/blog/tags/</link>
-    <description>Recent content in Tags on a tech.stuff blog</description>
+    <description>a tech.stuff blog (Tags)</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://jenkawitzig.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+    <atom:link href="https://jenkawitzig.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

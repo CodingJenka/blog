@@ -79,7 +79,11 @@ With gRPC the so called protocol buffer (&lt;em&gt;protobuf&lt;/em&gt;) takes ov
     &lt;/a&gt;
 &lt;/span&gt;
 &lt;/h4&gt;&lt;p&gt;A interchangeable language by itself doesn&amp;rsquo;t mean client and server are able to talk to each other. They also need some kind of adapters for exchange messages between each other. Magically, the construction plan for these adapters is also encoded in the protobuf. To decode it, it needs a special tool gRPC delivers us, the so called IDL compiler. The IDL compiler generates a so called stub on the client side as well as a skeleton on the server side. Stub and skeletons are fully functionally programs and adapters between our system code and the gRPC magic.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;gRPC.png&#34; alt=&#34;&amp;ldquo;Client server communication contains always a logical and physical part&amp;rdquo;&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;pull-left&#34;&gt;&lt;img src=&#34;gRPC.png&#34;/&gt;&lt;figcaption&gt;
+            &lt;h4&gt;Cool Image&lt;/h4&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
 &lt;h3 id=&#34;workflow&#34; &gt;Workflow
 &lt;span&gt;
     &lt;a href=&#34;#workflow&#34;&gt;

@@ -5,6 +5,7 @@ title: "a tech.stuff blog"
 theme:  ["github.com/Mitrichius/hugo-theme-anubis"]
 paginate: 10
 disqusShortname: "jenka"
+publishDir: "docs"
 
 menu:
   main:

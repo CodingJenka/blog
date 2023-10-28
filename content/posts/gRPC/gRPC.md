@@ -49,7 +49,10 @@ If you find some files with a ```.proto``` ending -> this is a protobuf.
 #### THE _adapters_: Stubs and Skeletons
 A interchangeable language by itself doesn't mean client and server are able to talk to each other. They also need some kind of adapters for exchange messages between each other. Magically, the construction plan for these adapters is also encoded in the protobuf. To decode it, it needs a special tool gRPC delivers us, the so called IDL compiler. The IDL compiler generates a so called stub on the client side as well as a skeleton on the server side. Stub and skeletons are fully functionally programs and adapters between our system code and the gRPC magic.
 
-!["Client server communication contains always a logical and physical part"](gRPC.png)
+{{< figure src="gRPC.png" title="Cool Image" class="pull-left" >}}
+
+
+[//]: # (!["Client server communication contains always a logical and physical part"]&#40;gRPC.png&#41;)
 
 ### Workflow
 Because we communicate via a network we deal with packages in the physically layer between client and server. These packages has to (de-)serialize on both sides, e.i. packing things and send it to the server as well as receiving an answer and unwrap it on the client side. And on the server side we have to unwrap things the client sends us and generate method calls. 
