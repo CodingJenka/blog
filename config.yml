@@ -47,3 +47,4 @@ params:
   disableSummary: true
   toc: true # display Table of Contents
   rssAsSocialIcon: true
+  favorite: true
