@@ -6,7 +6,16 @@
     <description>Recent content on a tech.stuff blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Oct 2023 20:58:54 +0200</lastBuildDate><atom:link href="https://jenkawitzig.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2023 20:58:54 +0200</lastBuildDate><atom:link href="https://jenkawitzig.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The girl.</title>
+      <link>https://jenkawitzig.github.io/blog/about/examplepost/</link>
+      <pubDate>Sun, 22 Oct 2023 20:58:54 +0200</pubDate>
+      
+      <guid>https://jenkawitzig.github.io/blog/about/examplepost/</guid>
+      <description>Blubb</description>
+    </item>
+    
     <item>
       <title>gRPC -- Makes Google remote procedure calls (finally) cool? </title>
       <link>https://jenkawitzig.github.io/blog/posts/grpc/</link>

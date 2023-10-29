@@ -3,6 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jenkawitzig.github.io/blog/</loc>
+    <lastmod>2023-10-22T20:58:54+02:00</lastmod>
+  </url><url>
+    <loc>https://jenkawitzig.github.io/blog/about/</loc>
+    <lastmod>2023-10-22T20:58:54+02:00</lastmod>
+  </url><url>
+    <loc>https://jenkawitzig.github.io/blog/about/examplepost/</loc>
+    <lastmod>2023-10-22T20:58:54+02:00</lastmod>
+  </url><url>
+    <loc>https://jenkawitzig.github.io/blog/categories/api/</loc>
+    <lastmod>2023-10-21T20:58:54+02:00</lastmod>
+  </url><url>
+    <loc>https://jenkawitzig.github.io/blog/tags/apis/</loc>
+    <lastmod>2023-10-21T20:58:54+02:00</lastmod>
+  </url><url>
+    <loc>https://jenkawitzig.github.io/blog/categories/architecture/</loc>
+    <lastmod>2023-10-21T20:58:54+02:00</lastmod>
+  </url><url>
+    <loc>https://jenkawitzig.github.io/blog/categories/</loc>
+    <lastmod>2023-10-21T20:58:54+02:00</lastmod>
+  </url><url>
+    <loc>https://jenkawitzig.github.io/blog/tags/grpc/</loc>
     <lastmod>2023-10-21T20:58:54+02:00</lastmod>
   </url><url>
     <loc>https://jenkawitzig.github.io/blog/posts/grpc/</loc>
@@ -11,8 +32,7 @@
     <loc>https://jenkawitzig.github.io/blog/posts/</loc>
     <lastmod>2023-10-21T20:58:54+02:00</lastmod>
   </url><url>
-    <loc>https://jenkawitzig.github.io/blog/categories/</loc>
-  </url><url>
     <loc>https://jenkawitzig.github.io/blog/tags/</loc>
+    <lastmod>2023-10-21T20:58:54+02:00</lastmod>
   </url>
 </urlset>
