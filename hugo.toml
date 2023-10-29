@@ -1,24 +1,17 @@
 languageCode = "en-us"
 baseUrl = "https://jenkawitzig.github.io/blog/"
 title = "a tech.stuff blog"
-theme = "PaperMod"
+theme = "hugo-coder"
 paginate = 10
 disqusShortname = "jenka"
 contentDir = "content"
 #defaultExtension= "html"
-#publishDir = "docs"
+publishDir = "docs"
+
 tags = [
   "apis",
   "architecture",
   "grpc",
-]
-features = [
-  "analytics",
-  "favicon",
-  "multilingual",
-  "pagination",
-  "single-column",
-  "syntax-highlighting"
 ]
 
 [menu]
