@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  gRPC -- Makes Google remote procedure calls (finally) cool?  · a tech.stuff blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Jenka">
+<meta name="description" content="Intro Link to heading Those who thought Remote Procedure Calls (RPC) were an old shoe have been taught better with the offshoot `gRPC developed by Google. I was introduced to RPC on and off with appalling regularity at university. Primarily at that time as CORBA. In some projects of my past working life I also came across old SOAP APIs from time to time. Neither of them made me love RPC very much.">
+<meta name="keywords" content="">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="gRPC -- Makes Google remote procedure calls (finally) cool? "/>
+<meta name="twitter:description" content="Intro Link to heading Those who thought Remote Procedure Calls (RPC) were an old shoe have been taught better with the offshoot `gRPC developed by Google. I was introduced to RPC on and off with appalling regularity at university. Primarily at that time as CORBA. In some projects of my past working life I also came across old SOAP APIs from time to time. Neither of them made me love RPC very much."/>
+
+<meta property="og:title" content="gRPC -- Makes Google remote procedure calls (finally) cool? " />
+<meta property="og:description" content="Intro Link to heading Those who thought Remote Procedure Calls (RPC) were an old shoe have been taught better with the offshoot `gRPC developed by Google. I was introduced to RPC on and off with appalling regularity at university. Primarily at that time as CORBA. In some projects of my past working life I also came across old SOAP APIs from time to time. Neither of them made me love RPC very much." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jenkawitzig.github.io/blog/posts/grpc/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-21T20:58:54+02:00" />
+<meta property="article:modified_time" content="2023-10-21T20:58:54+02:00" />
+
+
+
+
+<link rel="canonical" href="https://jenkawitzig.github.io/blog/posts/grpc/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/blog/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/blog/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/blog">
+      a tech.stuff blog
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://jenkawitzig.github.io/blog/posts/grpc/">
+              gRPC -- Makes Google remote procedure calls (finally) cool? 
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-10-21T20:58:54&#43;02:00">
+                2023-10-21
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/blog/categories/architecture/">architecture</a>
+      <span class="separator">•</span>
+    <a href="/blog/categories/api/">api</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/blog/tags/apis/">apis</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/blog/tags/grpc/">grpc</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="intro">
+  Intro
+  <a class="heading-link" href="#intro">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Those who thought <code>Remote Procedure Calls (RPC)</code> were an old shoe have been taught better with the offshoot `gRPC developed by Google. I was introduced to RPC on and off with appalling regularity at university. Primarily at that time as CORBA. In some projects of my past working life I also came across old SOAP APIs from time to time. Neither of them made me love RPC very much. So now gRPC as the newest child of the RPC family is vying for our favor.</p>
+<h2 id="idea">
+  Idea
+  <a class="heading-link" href="#idea">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Remote Procedure Calls based on a very simple idea: We take stuff we know from our local system (like calling some procedures or methods) and transfer them to the distributed world.</p>
+<p>The overall goal would be almost instantaneous, distributed and shared task processing on different nodes from wherever. But there is nothing like a free lunch: Instantaneous is nothing we have in communication networks.</p>
+<h2 id="technical-basic">
+  Technical basic
+  <a class="heading-link" href="#technical-basic">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img src="images/clientservergeneral.png" alt="clientServer"></p>
+<p>gRPC is used for client/server-communications.
+As always, client and server communicate in two ways:</p>
+<ul>
+<li>Firstly, in a logical way (a calls b for solving a problem) and also on a</li>
+<li>physical way (connect a and b via cable for instance).</li>
+</ul>
+<p>The job of gRPC is to encapsulate the physically communication part.</p>
+<p>To let partners communicate who do not necessarily speak the same language, gRPC has do two main jobs:</p>
+<ul>
+<li>define a common understandable language</li>
+<li>a kind of communication adapters on client and server side</li>
+</ul>
+<h3 id="a-common-understandable-language">
+  A common understandable language
+  <a class="heading-link" href="#a-common-understandable-language">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>The limits of my language mean the limits of my world.
+&ndash; <!-- raw HTML omitted -->Ludwig Wittgensteins<!-- raw HTML omitted --></p>
+</blockquote>
+<p>Languages based on known rules (e.g. grammar and certain vocabulary). If these rules are known among the communication participants, they can communicate with each other on the level of this language.
+With gRPC the so called protocol buffer (<em>protobuf</em>) takes over this task.</p>
+<h4 id="the-_protobuf_-an-idl-interface-definition-language">
+  THE <em>protobuf</em>: An IDL (Interface Definition Language)
+  <a class="heading-link" href="#the-_protobuf_-an-idl-interface-definition-language">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>&hellip; it&rsquo;s the HOW WE TALK as an declared interface in a language independent way. Language independent means: It can be written in a proper programming language, but i does not have to be. It can be written in same language like our system, but again: doesn&rsquo;t have to be.</p>
+<p>Interface means (very straight forward):Defining services and methods as a communication toolset between the partner. Each one knows these tools (methods), the needed additional (parameters) and the expected answer (return value) to communicate with someone else in a highly efficient way.</p>
+<p>If you find some files with a <code>.proto</code> ending -&gt; this is a protobuf.</p>
+<h4 id="the-_adapters_-stubs-and-skeletons">
+  THE <em>adapters</em>: Stubs and Skeletons
+  <a class="heading-link" href="#the-_adapters_-stubs-and-skeletons">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>A interchangeable language by itself doesn&rsquo;t mean client and server are able to talk to each other. They also need some kind of adapters for exchange messages between each other. Magically, the construction plan for these adapters is also encoded in the protobuf. To decode it, it needs a special tool gRPC delivers us, the so called IDL compiler. The IDL compiler generates a so called stub on the client side as well as a skeleton on the server side. Stub and skeletons are fully functionally programs and adapters between our system code and the gRPC magic.</p>
+<p><img src="images/withgrpc.png" alt="&ldquo;Client server communication contains always a logical and physical part&rdquo;"></p>
+<h3 id="workflow">
+  Workflow
+  <a class="heading-link" href="#workflow">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Because we communicate via a network we deal with packages in the physically layer between client and server. These packages has to (de-)serialize on both sides, e.i. packing things and send it to the server as well as receiving an answer and unwrap it on the client side. And on the server side we have to unwrap things the client sends us and generate method calls.</p>
+<h3 id="advantages-general-rpc">
+  Advantages: General RPC
+  <a class="heading-link" href="#advantages-general-rpc">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Contract driven communication between client and server</li>
+</ul>
+<p>Because of the shared interface as a formalize, machine readable interface description between client and server, it has to be specified exactly what the client expected from the server to deliver.</p>
+<h3 id="disadvantages-general-rpc">
+  Disadvantages: General RPC
+  <a class="heading-link" href="#disadvantages-general-rpc">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><code>Tight coupling between client and server:</code> Yes, there is an interface between them, but we have to be aware to keep both, client and server, up to date. Differences, e.g. different interface versions, are the death blow during the runtime for this kind of communication.</p>
+</li>
+<li>
+<p><code>Redeployment:</code> Is a consequence of the first point &ndash; Changes of the interface need to be known by the client and server. This will only be so after an update.</p>
+</li>
+<li>
+<p><code>Incompatibilities:</code>
+Is another consequence. The version of the interface changes, and some side breaks somehow.</p>
+</li>
+<li>
+<p><code>Illusion of transparency:</code> Although it (should) feels like there is not network between them, it is. If you believe this illusion you can run into serious problems.</p>
+</li>
+<li>
+<p><code>You have to know each other:</code> At the begin of this article i told you, we can use gRPC for different kind of clients and servers. It&rsquo;s not the whole truth: In reality, you have to know your opposite very well.</p>
+</li>
+</ul>
+<h3 id="disadvantages-grpc">
+  Disadvantages: gRPC
+  <a class="heading-link" href="#disadvantages-grpc">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><code>No generic semantic:</code>
+Have to invent and define by your own. It&rsquo;s unique protocol (on the semantic layer).</p>
+</li>
+<li>
+<p><code>Limited compatibility and static relationships between client and server</code></p>
+</li>
+<li>
+<p><code>It's much harder to consume it (in comparison e.g. with a Http api)</code></p>
+</li>
+</ul>
+<h3 id="so-why-grpc">
+  So why gRPC?
+  <a class="heading-link" href="#so-why-grpc">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Some of the previous issues are not that presents in Google&rsquo;s version of RPC. Secondly: In some cases we don&rsquo;t need to worry about these, because our project/system context allows us not to.</p>
+<h3 id="bingo-points-grpc">
+  Bingo points gRPC
+  <a class="heading-link" href="#bingo-points-grpc">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Based on Googles Protocol Buffer as a efficient, binary exchangeable format</li>
+<li>Based on  HTTP/2</li>
+<li>Field index support for meta information to survive some version incompatibilities</li>
+<li>Supports streaming</li>
+</ul>
+<h3 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>When to use it?</th>
+<th>When to avoid it?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High throughput?</td>
+<td>Need public Apis? Only use it when there is no alternative and you are willing to ship SDKs!!</td>
+</tr>
+<tr>
+<td>High performance needed? (*)</td>
+<td></td>
+</tr>
+<tr>
+<td>Efficient resource usage needed? (*)</td>
+<td></td>
+</tr>
+<tr>
+<td>Know or own your clients?</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>(*) Performance and resource usage efficiency is given by the binary exchange format.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script>
+  window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jenka" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    
+    document.addEventListener('themeChanged', function (e) { 
+        if (document.readyState == 'complete') {
+          DISQUS.reset({ reload: true, config: disqus_config });
+        }
+    });
+</script>
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2023
+     Jenka 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/blog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

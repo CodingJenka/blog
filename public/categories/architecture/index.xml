@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>architecture on a tech.stuff blog</title>
+    <link>https://jenkawitzig.github.io/blog/categories/architecture/</link>
+    <description>Recent content in architecture on a tech.stuff blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Oct 2023 20:58:54 +0200</lastBuildDate><atom:link href="https://jenkawitzig.github.io/blog/categories/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gRPC -- Makes Google remote procedure calls (finally) cool? </title>
+      <link>https://jenkawitzig.github.io/blog/posts/grpc/</link>
+      <pubDate>Sat, 21 Oct 2023 20:58:54 +0200</pubDate>
+      
+      <guid>https://jenkawitzig.github.io/blog/posts/grpc/</guid>
+      <description>Intro Those who thought Remote Procedure Calls (RPC) were an old shoe have been taught better with the offshoot `gRPC developed by Google. I was introduced to RPC on and off with appalling regularity at university. Primarily at that time as CORBA. In some projects of my past working life I also came across old SOAP APIs from time to time. Neither of them made me love RPC very much. So now gRPC as the newest child of the RPC family is vying for our favor.</description>
+    </item>
+    
+  </channel>
+</rss>

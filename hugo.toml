@@ -4,7 +4,7 @@ title = "a tech.stuff blog"
 theme = "hugo-coder"
 paginate = 10
 disqusShortname = "jenka"
-contentDir = "content"
+#contentDir = "content"
 #defaultExtension= "html"
 publishDir = "docs"
 
