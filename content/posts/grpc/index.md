@@ -3,7 +3,7 @@ title = 'gRPC -- Makes Google remote procedure calls (finally) cool? '
 description = "it's about googles interpretation of RPC, when to use and when not" 
 tags = [ "apis", "grpc" ]
 categories = [ "architecture", "api",]
-date = 2022-06-05T20:58:54+02:00
+date = 2023-03-10T20:58:54+02:00
 draft = false
 +++
 

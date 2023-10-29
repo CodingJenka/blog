@@ -1,6 +1,6 @@
 +++
 title = 'HTTP -- this thing what you think is ReST  '
-date = 2022-06-08T20:58:54+02:00
+date = 2023-06-10T20:58:54+02:00
 tags = [ "apis", "http" ]
 categories = [ "architecture", "api",]
 draft = true
