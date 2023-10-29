@@ -2,36 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>a tech.stuff blog</title>
-    <link>https://jenkawitzig.github.io/blog/</link>
+    <link>https://codingjenka.github.io/blog/</link>
     <description>Recent content on a tech.stuff blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Oct 2023 20:58:54 +0200</lastBuildDate><atom:link href="https://jenkawitzig.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2023 20:58:54 +0200</lastBuildDate><atom:link href="https://codingjenka.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The girl.</title>
-      <link>https://jenkawitzig.github.io/blog/about/examplepost/</link>
+      <link>https://codingjenka.github.io/blog/about/examplepost/</link>
       <pubDate>Sun, 22 Oct 2023 20:58:54 +0200</pubDate>
       
-      <guid>https://jenkawitzig.github.io/blog/about/examplepost/</guid>
+      <guid>https://codingjenka.github.io/blog/about/examplepost/</guid>
       <description>Blubb</description>
     </item>
     
     <item>
+      <title>APIs -- an overview</title>
+      <link>https://codingjenka.github.io/blog/posts/apicomparison/</link>
+      <pubDate>Fri, 20 Oct 2023 20:58:54 +0200</pubDate>
+      
+      <guid>https://codingjenka.github.io/blog/posts/apicomparison/</guid>
+      <description>This will be a series of the most used API styles:
+gRPC, HttP ReST graphQL </description>
+    </item>
+    
+    <item>
       <title>HTTP -- this thing what you think is ReST  </title>
-      <link>https://jenkawitzig.github.io/blog/posts/http/</link>
+      <link>https://codingjenka.github.io/blog/posts/http/</link>
       <pubDate>Sat, 10 Jun 2023 20:58:54 +0200</pubDate>
       
-      <guid>https://jenkawitzig.github.io/blog/posts/http/</guid>
+      <guid>https://codingjenka.github.io/blog/posts/http/</guid>
       <description>Intro Link to heading I often read in applications that the candidates know ReST. When they are asked what the quintessence of ReST is and how it differs from HTTP, i rarely get a satisfactory answer. Therefore, let&amp;rsquo;s first have a look at HTTP a.k.a. what most developers understand by a ReST API.
 Idea Link to heading The base idea behind HTTP is that we use the magic that the web provides us with free of charge.</description>
     </item>
     
     <item>
       <title>gRPC -- Makes Google remote procedure calls (finally) cool? </title>
-      <link>https://jenkawitzig.github.io/blog/posts/grpc/</link>
+      <link>https://codingjenka.github.io/blog/posts/grpc/</link>
       <pubDate>Fri, 10 Mar 2023 20:58:54 +0200</pubDate>
       
-      <guid>https://jenkawitzig.github.io/blog/posts/grpc/</guid>
+      <guid>https://codingjenka.github.io/blog/posts/grpc/</guid>
       <description>Intro Link to heading Those who thought Remote Procedure Calls (RPC) were an old shoe have been taught better with the offshoot `gRPC developed by Google. I was introduced to RPC on and off with appalling regularity at university. Primarily at that time as CORBA. In some projects of my past working life I also came across old SOAP APIs from time to time. Neither of them made me love RPC very much.</description>
     </item>
     

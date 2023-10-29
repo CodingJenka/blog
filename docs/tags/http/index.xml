@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>http on a tech.stuff blog</title>
-    <link>https://jenkawitzig.github.io/blog/tags/http/</link>
+    <link>https://codingjenka.github.io/blog/tags/http/</link>
     <description>Recent content in http on a tech.stuff blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jun 2023 20:58:54 +0200</lastBuildDate><atom:link href="https://jenkawitzig.github.io/blog/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jun 2023 20:58:54 +0200</lastBuildDate><atom:link href="https://codingjenka.github.io/blog/tags/http/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTTP -- this thing what you think is ReST  </title>
-      <link>https://jenkawitzig.github.io/blog/posts/http/</link>
+      <link>https://codingjenka.github.io/blog/posts/http/</link>
       <pubDate>Sat, 10 Jun 2023 20:58:54 +0200</pubDate>
       
-      <guid>https://jenkawitzig.github.io/blog/posts/http/</guid>
+      <guid>https://codingjenka.github.io/blog/posts/http/</guid>
       <description>Intro Link to heading I often read in applications that the candidates know ReST. When they are asked what the quintessence of ReST is and how it differs from HTTP, i rarely get a satisfactory answer. Therefore, let&amp;rsquo;s first have a look at HTTP a.k.a. what most developers understand by a ReST API.
 Idea Link to heading The base idea behind HTTP is that we use the magic that the web provides us with free of charge.</description>
     </item>

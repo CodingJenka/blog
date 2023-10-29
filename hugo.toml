@@ -1,5 +1,5 @@
 languageCode = "en-us"
-baseUrl = "https://jenkawitzig.github.io/blog/"
+baseUrl = "https://codingjenka.github.io/blog/"
 title = "a tech.stuff blog"
 theme = "hugo-coder"
 paginate = 10
