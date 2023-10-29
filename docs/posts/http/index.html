@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  HTTP -- this thing what you think is ReST   · a tech.stuff blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Jenka">
+<meta name="description" content="Intro Link to heading I often read in applications that the candidates know ReST. When they are asked what the quintessence of ReST is and how it differs from HTTP, i rarely get a satisfactory answer. Therefore, let&rsquo;s first have a look at HTTP a.k.a. what most developers understand by a ReST API.
+Idea Link to heading The base idea behind HTTP is that we use the magic that the web provides us with free of charge.">
+<meta name="keywords" content="">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTTP -- this thing what you think is ReST  "/>
+<meta name="twitter:description" content="Intro Link to heading I often read in applications that the candidates know ReST. When they are asked what the quintessence of ReST is and how it differs from HTTP, i rarely get a satisfactory answer. Therefore, let&rsquo;s first have a look at HTTP a.k.a. what most developers understand by a ReST API.
+Idea Link to heading The base idea behind HTTP is that we use the magic that the web provides us with free of charge."/>
+
+<meta property="og:title" content="HTTP -- this thing what you think is ReST  " />
+<meta property="og:description" content="Intro Link to heading I often read in applications that the candidates know ReST. When they are asked what the quintessence of ReST is and how it differs from HTTP, i rarely get a satisfactory answer. Therefore, let&rsquo;s first have a look at HTTP a.k.a. what most developers understand by a ReST API.
+Idea Link to heading The base idea behind HTTP is that we use the magic that the web provides us with free of charge." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jenkawitzig.github.io/blog/posts/http/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-10T20:58:54+02:00" />
+<meta property="article:modified_time" content="2023-06-10T20:58:54+02:00" />
+
+
+
+
+<link rel="canonical" href="https://jenkawitzig.github.io/blog/posts/http/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/blog/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/blog/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/blog">
+      a tech.stuff blog
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://jenkawitzig.github.io/blog/posts/http/">
+              HTTP -- this thing what you think is ReST  
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-06-10T20:58:54&#43;02:00">
+                2023-06-10
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/blog/categories/architecture/">architecture</a>
+      <span class="separator">•</span>
+    <a href="/blog/categories/api/">api</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/blog/tags/apis/">apis</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/blog/tags/http/">http</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="intro">
+  Intro
+  <a class="heading-link" href="#intro">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I often read in applications that the candidates know <code>ReST</code>. When they are asked what the quintessence of <code>ReST</code> is and how it differs from <code>HTTP</code>, i rarely get a satisfactory answer. Therefore, let&rsquo;s first have a look at <code>HTTP</code> a.k.a. what most developers understand by a ReST API.</p>
+<h2 id="idea">
+  Idea
+  <a class="heading-link" href="#idea">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The base idea behind <code>HTTP</code> is that we use the magic that the web provides us with free of charge.</p>
+<h3 id="where-does-it-come-from">
+  Where does it come from?
+  <a class="heading-link" href="#where-does-it-come-from">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><code>HTTP</code>, short for <code>Hypertext transfer protocol</code>, is a stateless protocol of the applicationlayer in the ISO/OSI web model. This layer is used by application for exchange information. Stateless is similar to memory- or history-less: Every session feels like a brand new one. That means: If you call a website twice, you wouldn&rsquo;t be recognise again (to be so, there are some tricks, like using cookies).</p>
+<p><img src="images/iso.png" alt="&ldquo;Client server communication contains always a logical and physical part&rdquo;"></p>
+<h3 id="let-them-talk-to-eachother">
+  Let them talk to eachother!
+  <a class="heading-link" href="#let-them-talk-to-eachother">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="common-language">
+  Common language
+  <a class="heading-link" href="#common-language">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p><code>HTTP</code> doesn&rsquo;t require a specific language like gRPC. There is a common structured unit &ndash; known as a<code>messge</code>&ndash; that acts as exchangeable information and is understood by every node on the web.
+A message contains a header (here we find some base information and metadata) and the actual message body. Messages from a client to a server are called <code>requests</code>. Answers from the server back to the client are <code>responses</code>.</p>
+<p><img src="images/reqresponse.png" alt="&ldquo;Client server communication contains always a logical and physical part&rdquo;"></p>
+<h3 id="dont-need-for-any-adapaters-everyone-speaks-the-same-language-everyone-understand-eachother">
+  Don&rsquo;t need for any adapaters: Everyone speaks the same language, everyone understand eachother
+  <a class="heading-link" href="#dont-need-for-any-adapaters-everyone-speaks-the-same-language-everyone-understand-eachother">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="http-verbs">
+  HTTP verbs
+  <a class="heading-link" href="#http-verbs">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>A key feature that <code>HTTP</code> brings to the table are the so-called<code>verbs</code>. These verbs are familiar to all nodes of the web, i.e. each node knows how to use them or react to them. The most used are <code>GET</code>, <code>POST</code>, <code>PUT</code>and <code>DELETE</code>.</p>
+<p>Verbs are like buckets for different operations. Almost every method of your API can be sorted into one of these four buckets (and if not so: HTTP provides some few more verbs).</p>
+<p>For instance:</p>
+<ul>
+<li>consuming behaviour, like reading something fits into <code>GET</code></li>
+<li>methods, which create something new can be thrown into the <code>POST</code> bucket (btw: this &ldquo;<em>something new</em>&rdquo; is called a <code>resource</code>and is accessible via an URI afterwards)</li>
+<li>every functionality for updating a existing resource is a <code>PUT</code></li>
+<li>and <code>DELETE</code> is&hellip; ja&hellip; you know&hellip;</li>
+</ul>
+<p>Besides <code>POST</code> all of the others from this list are idempotent.</p>
+<h4 id="known-buckets--known-behaviour">
+  Known buckets = known behaviour
+  <a class="heading-link" href="#known-buckets--known-behaviour">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>This approach of a basic set of buckets that bundle your individual methods leads to a generic &rsquo;everyone-knows-it&rsquo;-toolset. Even if your counterpart doesn&rsquo;t know what <code>getYoloId()</code>explicity means, the <code>GET</code> bucket provides the necessary information do deal with it.</p>
+<p><!-- raw HTML omitted --> <code>HTTP</code> is also language agnostic, meaning, that as long as a suitable library is provided, it can be used by every programming language. Therefore, you can write your API in both JAVA and Javascript and it will do the same.</p>
+<p>Another plus: <!-- raw HTML omitted -->It&rsquo;s not only a generic everyone-knows-it toolset for different commuication partner. Because it&rsquo;s well defined, additional tools can understand it too. Tools like the browser, which enable debugging or caching.</p>
+<h2 id="technical-basic">
+  Technical basic
+  <a class="heading-link" href="#technical-basic">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The most common way to define a <code>HTTP</code> web api is to describe it like the following example shows.</p>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>METHOD</th>
+<th>MEANING</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://store.com/v1/customers"  class="external-link" target="_blank" rel="noopener">https://store.com/v1/customers</a></td>
+<td>POST</td>
+<td>create a new customer</td>
+</tr>
+<tr>
+<td><a href="https://store.com/v1/customers/%7bid%7d"  class="external-link" target="_blank" rel="noopener">https://store.com/v1/customers/{id}</a></td>
+<td>GET</td>
+<td>get customer details</td>
+</tr>
+<tr>
+<td><a href="https://store.com/v1/customers/%7bid%7d/orders"  class="external-link" target="_blank" rel="noopener">https://store.com/v1/customers/{id}/orders</a></td>
+<td>GET</td>
+<td>get a list of customer&rsquo;s details (here his/her orders)</td>
+</tr>
+</tbody>
+</table>
+<p>Meanwhile, there are also very good standards for this, such as <a href="https://swagger.io/resources/articles/best-practices-in-api-design/"  class="external-link" target="_blank" rel="noopener">swagger</a>, which supports a standardization of the end points and relieve us of a great deal of typing work.</p>
+<h3 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>After this brief introduction to the basics of <code>HTTP</code>, let&rsquo;s now summarize the advantages and disadvantages of this type of API:</p>
+<table>
+<thead>
+<tr>
+<th>Yay</th>
+<th>Nay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Easy to use</td>
+<td>static usage of a dynamic approach -&gt; also means creating a static relationship between client and server</td>
+</tr>
+<tr>
+<td>Generic, HTTP based semantic</td>
+<td>URIs a re part of the API description (that means: the position of your params become important</td>
+</tr>
+<tr>
+<td>Wide tool support</td>
+<td>Changes of URI means changing of your API</td>
+</tr>
+<tr>
+<td>Widely accepted</td>
+<td>Tighter coupling</td>
+</tr>
+<tr>
+<td>Standard exchange formats, like XML, JSON&hellip;</td>
+<td></td>
+</tr>
+<tr>
+<td>Strong focus on server side logic , low demand on consumer</td>
+<td></td>
+</tr>
+<tr>
+<td>API description support by tools, like OpenAPI/Swagger</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="attention">
+  Attention
+  <a class="heading-link" href="#attention">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><code>It's contrary to common practice, BUT: Avoid using this type of API style for public APIs that you need to maintain over time.</code></p>
+<p>It&rsquo;s your contract to the outer world. If you make.e.g. the structure of a URI part of your API description, you have conveyed some hard facts to the outside world. Your clients will rely on this information. Changing the URI, perhaps due to versioning, is a breach of the contract.</p>
+
+      </div>
+
+
+      <footer>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2023
+     Jenka 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/blog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7QHVTGBQ8W"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-7QHVTGBQ8W', { 'anonymize_ip': false });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

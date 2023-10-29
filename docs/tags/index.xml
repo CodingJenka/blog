@@ -6,13 +6,22 @@
     <description>Recent content in Tags on a tech.stuff blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Mar 2023 20:58:54 +0200</lastBuildDate><atom:link href="https://jenkawitzig.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jun 2023 20:58:54 +0200</lastBuildDate><atom:link href="https://jenkawitzig.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>apis</title>
       <link>https://jenkawitzig.github.io/blog/tags/apis/</link>
-      <pubDate>Fri, 10 Mar 2023 20:58:54 +0200</pubDate>
+      <pubDate>Sat, 10 Jun 2023 20:58:54 +0200</pubDate>
       
       <guid>https://jenkawitzig.github.io/blog/tags/apis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http</title>
+      <link>https://jenkawitzig.github.io/blog/tags/http/</link>
+      <pubDate>Sat, 10 Jun 2023 20:58:54 +0200</pubDate>
+      
+      <guid>https://jenkawitzig.github.io/blog/tags/http/</guid>
       <description></description>
     </item>
     

@@ -3,7 +3,7 @@ title = 'HTTP -- this thing what you think is ReST  '
 date = 2023-06-10T20:58:54+02:00
 tags = [ "apis", "http" ]
 categories = [ "architecture", "api",]
-draft = true
+draft = false
 +++
 
 ## Intro
