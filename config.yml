@@ -2,7 +2,7 @@ baseURL: 'https://jenkawitzig.github.io/blog/'
 languageCode: "en-us"
 baseUrl: ""
 title: "a tech.stuff blog"
-theme:  ["github.com/Mitrichius/hugo-theme-anubis"]
+theme: "anubis"
 paginate: 10
 disqusShortname: "jenka"
 publishDir: "docs"
@@ -20,11 +20,11 @@ menu:
     title: About
     url: /about/
     weight: 3
-  - identifier: tags
-    name: Tags
-    title: Tags
-    url: /tags/
-    weight: 2
+#  - identifier: tags
+#    name: Tags
+#    title: Tags
+#    url: /tags/
+#    weight: 2
 
 params:
   author: "Jenka"
