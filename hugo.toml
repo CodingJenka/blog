@@ -1,4 +1,3 @@
-baseURL = 'https://jenkawitzig.github.io/blog/'
 languageCode = "en-us"
 baseUrl = "https://jenkawitzig.github.io/blog/"
 title = "a tech.stuff blog"
@@ -49,6 +48,9 @@ publishDir = "docs"
 #    weight: 2
 
 [Params]
+  avatarURL = "/Users/jenniferwitzig/blog/blog/images/me.jpeg"
+#  favicon_16 = "/Users/jenniferwitzig/blog/blog/images/me.jpeg"
+  since = "2023"
   author = "Jenka"
   #email: mail@example.org # used for microformats
 #  avatar: "/images/me.png" # used for microformats
