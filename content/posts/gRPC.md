@@ -17,7 +17,7 @@ The overall goal would be almost instantaneous, distributed and shared task proc
 
 ## Technical basic
 
-!["Client server communication contains always a logical and physical part"](../../static/clientServerGeneral.png)
+!["Client server communication contains always a logical and physical part"](../../static/images/clientServerGeneral.png)
 
 gRPC is used for client/server-communications.
 As always, client and server communicate in two ways: 
