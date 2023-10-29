@@ -2,7 +2,7 @@ baseURL: 'https://jenkawitzig.github.io/blog/'
 languageCode: "en-us"
 baseUrl: ""
 title: "a tech.stuff blog"
-theme: "anubis"
+theme: "hugo-coder"
 paginate: 10
 disqusShortname: "jenka"
 publishDir: "docs"
