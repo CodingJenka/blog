@@ -1,7 +1,7 @@
 languageCode = "en-us"
 baseUrl = "https://jenkawitzig.github.io/blog/"
 title = "a tech.stuff blog"
-theme = "hugo-coder"
+theme = "PaperMod"
 paginate = 10
 disqusShortname = "jenka"
 contentDir = "content"
