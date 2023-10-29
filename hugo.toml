@@ -7,6 +7,7 @@ disqusShortname = "jenka"
 #contentDir = "content"
 #defaultExtension= "html"
 publishDir = "docs"
+googleAnalytics = "G-7QHVTGBQ8W"
 
 tags = [
   "apis",
