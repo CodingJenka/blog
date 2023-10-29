@@ -17,16 +17,6 @@
     </item>
     
     <item>
-      <title>APIs -- an overview</title>
-      <link>https://codingjenka.github.io/blog/posts/apicomparison/</link>
-      <pubDate>Tue, 03 Oct 2023 20:58:54 +0200</pubDate>
-      
-      <guid>https://codingjenka.github.io/blog/posts/apicomparison/</guid>
-      <description>This will be a series of the most used API styles:
-gRPC, HttP ReST graphQL </description>
-    </item>
-    
-    <item>
       <title>HTTP -- this thing what you think is ReST  </title>
       <link>https://codingjenka.github.io/blog/posts/http/</link>
       <pubDate>Sat, 10 Jun 2023 20:58:54 +0200</pubDate>
@@ -34,6 +24,16 @@ gRPC, HttP ReST graphQL </description>
       <guid>https://codingjenka.github.io/blog/posts/http/</guid>
       <description>Intro Link to heading I often read in applications that the candidates know ReST. When they are asked what the quintessence of ReST is and how it differs from HTTP, i rarely get a satisfactory answer. Therefore, let&amp;rsquo;s first have a look at HTTP a.k.a. what most developers understand by a ReST API.
 Idea Link to heading The base idea behind HTTP is that we use the magic that the web provides us with free of charge.</description>
+    </item>
+    
+    <item>
+      <title>APIs -- an overview</title>
+      <link>https://codingjenka.github.io/blog/posts/apicomparison/</link>
+      <pubDate>Fri, 10 Mar 2023 20:58:54 +0200</pubDate>
+      
+      <guid>https://codingjenka.github.io/blog/posts/apicomparison/</guid>
+      <description>This will be a series of the most used API styles:
+gRPC, HttP ReST graphQL </description>
     </item>
     
     <item>
