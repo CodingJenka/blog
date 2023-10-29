@@ -29,7 +29,7 @@ menu:
 params:
   author: "Jenka"
   #email: mail@example.org # used for microformats
-  avatar: "/images/me.png" # used for microformats
+#  avatar: "/images/me.png" # used for microformats
   description: "Coding girl with a strong passion for softwareT architecture and coding general"
   # Uncomment if you need this
   # images:
@@ -40,7 +40,7 @@ params:
   #   - js/main.js # relative path to "assets" directory
   dateFormat: "2006-01-02"
   paginationSinglePost: true
-  style: auto
+#  style: auto
   mainSections: [ "posts" ]
 #  sectionsWithFullContentOnListPage: [ "notes" ]
   readMore: true # show read more button
