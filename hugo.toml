@@ -13,11 +13,11 @@ publishDir = "docs"
   weight = 10
 [[menu.main]]
   name = 'Posts'
-  pageRef = '/posts'
+  pageRef = '/posts/'
   weight = 20
 [[menu.main]]
   name = 'About'
-  pageRef = '/about'
+  pageRef = '/about/'
   weight = 30
 #[[menu.footer]]
 #  name = 'Terms'
