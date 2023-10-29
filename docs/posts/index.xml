@@ -16,14 +16,5 @@
       <description>Intro Link to heading Those who thought Remote Procedure Calls (RPC) were an old shoe have been taught better with the offshoot `gRPC developed by Google. I was introduced to RPC on and off with appalling regularity at university. Primarily at that time as CORBA. In some projects of my past working life I also came across old SOAP APIs from time to time. Neither of them made me love RPC very much.</description>
     </item>
     
-    <item>
-      <title>APIs -- an overview</title>
-      <link>https://jenkawitzig.github.io/blog/posts/apicomparison/</link>
-      <pubDate>Fri, 20 Oct 2023 20:58:54 +0200</pubDate>
-      
-      <guid>https://jenkawitzig.github.io/blog/posts/apicomparison/</guid>
-      <description>Blubb</description>
-    </item>
-    
   </channel>
 </rss>

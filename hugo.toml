@@ -31,13 +31,15 @@ tags = [
 
 [Params]
 #  avatarURL = "images/me.jpeg"
-#  favicon_16 = "/Users/jenniferwitzig/blog/blog/images/me.jpeg"
+#  favicon_16 = "images/me.jpeg"
   enableEmoji = true
   since = 2023
   author = "Jenka"
   description ="Coding girl with a strong passion for softwareT architecture and coding general"
   dateFormat = "2006-01-02"
   paginationSinglePost = true
+  include_toc = true
+  show_comments = false
 #  style: auto
 #  mainSections = [ "posts" ]
   readMore = true # show read more button
