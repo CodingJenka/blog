@@ -44,7 +44,7 @@ features = [
   dateFormat = "2006-01-02"
   paginationSinglePost = true
 #  style: auto
-  mainSections = [ "posts" ]
+#  mainSections = [ "posts" ]
   readMore = true # show read more button
   readNextPosts = 5  # show 5 related posts, 0 by default
   disableSummary = true
