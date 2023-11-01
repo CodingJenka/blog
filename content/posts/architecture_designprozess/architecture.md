@@ -1,6 +1,6 @@
 +++
-draft = true
-date = 2023-10-30T09:00:11+01:00
+draft = false
+date = 2023-11-05T09:00:11+01:00
 title = "The software architect. This unknown suspekt."
 description = ""
 slug = ""
