@@ -1,5 +1,5 @@
 +++
-draft = false
+draft = true
 date = 2023-11-05T09:00:11+01:00
 title = "The software architect. This unknown suspekt."
 description = ""

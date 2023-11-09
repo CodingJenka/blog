@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  The software architect. This unknown suspekt. · a tech.stuff blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Jenka">
+<meta name="description" content="The architect who is not only a developer. Link to heading Recently, a CTO person said to me, after I told him, my passion is software architecture:
+But every developer should know about architecture, it&rsquo;s not something that needs to be done extra&hellip;&rsquo;&#39;.
+Dear product managers, dear CTOs: Yes, unfortunately software architecture is something that has to be done extra.
+Software architecture goes beyond OOP. It is not something you do once and then never touch again.">
+<meta name="keywords" content="">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The software architect. This unknown suspekt."/>
+<meta name="twitter:description" content="The architect who is not only a developer. Link to heading Recently, a CTO person said to me, after I told him, my passion is software architecture:
+But every developer should know about architecture, it&rsquo;s not something that needs to be done extra&hellip;&rsquo;&#39;.
+Dear product managers, dear CTOs: Yes, unfortunately software architecture is something that has to be done extra.
+Software architecture goes beyond OOP. It is not something you do once and then never touch again."/>
+
+<meta property="og:title" content="The software architect. This unknown suspekt." />
+<meta property="og:description" content="The architect who is not only a developer. Link to heading Recently, a CTO person said to me, after I told him, my passion is software architecture:
+But every developer should know about architecture, it&rsquo;s not something that needs to be done extra&hellip;&rsquo;&#39;.
+Dear product managers, dear CTOs: Yes, unfortunately software architecture is something that has to be done extra.
+Software architecture goes beyond OOP. It is not something you do once and then never touch again." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://codingjenka.github.io/blog/posts/architecture_designprozess/architecture/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-11-05T09:00:11+01:00" />
+<meta property="article:modified_time" content="2023-11-05T09:00:11+01:00" />
+
+
+
+
+<link rel="canonical" href="https://codingjenka.github.io/blog/posts/architecture_designprozess/architecture/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/blog/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/blog/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/blog">
+      a tech.stuff blog
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://codingjenka.github.io/blog/posts/architecture_designprozess/architecture/">
+              The software architect. This unknown suspekt.
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-11-05T09:00:11&#43;01:00">
+                2023-11-05
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              11-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/blog/tags/architecture/">architecture</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/blog/tags/software-architect/">software architect</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <hr>
+<h2 id="the-architect-who-is-not-only-a-developer">
+  The architect who is not only a developer.
+  <a class="heading-link" href="#the-architect-who-is-not-only-a-developer">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Recently, a CTO person said to me, after I told him, my passion is <code>software architecture</code>:</p>
+<blockquote>
+<p>But every developer should know about architecture, it&rsquo;s not something that needs to be done <em>extra</em>&hellip;&rsquo;'.</p>
+</blockquote>
+<p><em>Dear product managers, dear CTOs:</em>
+Yes, unfortunately software architecture is something that has to be done <em>extra</em>.</p>
+<p>Software architecture goes beyond OOP. It is not something you do once and then never touch again. Architecture is always holistic. Architecture evolves. The software architect does not only want to design a beautiful system, he also wants to make it stable, i.e. durable. He is a designer and structural engineer at the same time.</p>
+<p>Do you do that on the side? From a cost perspective, it would probably be nice if that were the case. However, experience teaches us otherwise&hellip;</p>
+<p>This post would like to shed some light on the unknown entity, the &ldquo;<em>software architect</em>&rdquo; and give a short outline about this ominous &ldquo;<em>software architecture</em>&rdquo;.</p>
+<p>Disclaimer beforehand: This reflects of course only my subjective view. Since there is no universal definition of both terms (sic!), the following is, of course, only <em>one</em> opinion among many. Also I don&rsquo;t guarantee that I will tell something completely different about it in a few years :)</p>
+<hr>
+<h2 id="the-architects-goal">
+  The architect&rsquo;s goal
+  <a class="heading-link" href="#the-architects-goal">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The architect loves <code>quality</code>.</p>
+<p>He seeks them out in the requirements and knows that a system must have both, quality as well as function.
+Like the civil architect, the software architect wants to build something that meets the needs of the user in terms of function and structure and, ideally, is durable over a long period of time.
+A system should not only work. It should work <em>well</em>.</p>
+<p>The problem with technical systems, however, is that they can rot faster than fallen fruit in the warm late autumn. And if you don&rsquo;t pay attention, then at some point, in the truest sense of the word, the worm is within the system (and with that the maximum number of bad puns for this text is reached&hellip;). :)).
+That systems erode is beyond question. The question is how fast this happens. Controlling this is also the architect&rsquo;s responsibility.</p>
+<p>So the architect not only wants to create, he also wants to preserve. He is the builder, restorer and anti-aging manager of the system. (And, because he also likes the CTO, he naturally wants to maintain the quality of the system at calculable costs as constant as possible).</p>
+<hr>
+<h2 id="_the_-architecture">
+  <em>THE</em> architecture.
+  <a class="heading-link" href="#_the_-architecture">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>First of all: There is no such thing as <em>the</em> architecture. Systems are like living organisms. Individual and with quirks. If you try to create a one-size-fits-all solution, you will fail very quickly. Just as systems change, architecture must change as well.</p>
+<p>Here, the list of factors influencing an architecture is nearly unlimited.</p>
+<p>Some examples:</p>
+<ul>
+<li>Where is the company located? A startup has a different architectural focus than an established company.</li>
+<li>Where is the product located?</li>
+<li>How is the company structured?</li>
+<li>What does the team for a product look like?</li>
+<li>&hellip;</li>
+<li></li>
+</ul>
+<p>Good architecture adapts to different circumstances.</p>
+<p>A good architect recognizes the signs of the times and sets the guard rails for necessary measures for the evolution of architecture.</p>
+<h2 id="architecture-an-attempt-at-definition">
+  Architecture: An Attempt at Definition
+  <a class="heading-link" href="#architecture-an-attempt-at-definition">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Unfortunately, there is no universal definition for software architecture. However, we&rsquo;ll give it a try anyway&hellip;</p>
+<h3 id="first-try-iso">
+  First try: ISO
+  <a class="heading-link" href="#first-try-iso">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>ISO standards are actually always good to define things. That&rsquo;s why at the beginning of ISO/IEC 42010:2007 . It says:</p>
+<blockquote>
+<p>[Architecture is ]The fundamental organization of a system, embodied in its components, their relationships to each other and to the environment, and the principles guiding its design and evolution.</p>
+</blockquote>
+<p>So software architecture organizes something inside and connects something with the outside. It establishes principles as guidelines that influence the design and development of the system.</p>
+<p>So far not bad&hellip;</p>
+<h3 id="second-try-martin-fowler">
+  Second try: Martin Fowler
+  <a class="heading-link" href="#second-try-martin-fowler">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Martin Fowler once said that architecture&hellip;.</p>
+<blockquote>
+<p>are all the decisions that are difficult to change.</p>
+</blockquote>
+<p>Also very good!</p>
+<h3 id="third-try-further">
+  Third try: Further&hellip;
+  <a class="heading-link" href="#third-try-further">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Other views see architecture as the bridge between requirements engineering and actual implementation. Architecture includes the initial creation as well as the long-term development of the system.</p>
+<h3 id="butter-by-the-fishes-architecture-is-therefore">
+  Butter by the fishes: Architecture is therefore&hellip;
+  <a class="heading-link" href="#butter-by-the-fishes-architecture-is-therefore">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>&hellip; somehow all of the above. It builds the bridge between theory (technicality) and the actual translation into code. To be able to build this bridge, essential features have to be distilled. If one knows the system-relevant in function and quality, one can also bring structure and order into it. This requires brainpower and is therefore, as is often the case with tasks that require brainpower, not something that can be done at short notice, let alone quickly revised.</p>
+<hr>
+<h2 id="architektur-in-the-enterprise-environment">
+  Architektur in the enterprise environment
+  <a class="heading-link" href="#architektur-in-the-enterprise-environment">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Michael Keeling said in his book <a href="https://amzn.eu/d/jdcArBr"  class="external-link" target="_blank" rel="noopener">Design it!</a> that software always lives in a system context. System (ancient Greek sýstēma) is, according to Wikipedia, a..:</p>
+<blockquote>
+<p>&hellip;whole composed of several individual parts.</p>
+</blockquote>
+<p>However, as techies we have to be careful: System is not only to be thought of technically, but also socially.</p>
+<p>Sure, technically our software forms a system. It runs somewhere and is somehow operated by someone. It exchanges data with other systems and is developed by us as a team.</p>
+<p>Stupidly, there is another &ldquo;<em>out there</em>&rdquo; that also somehow interacts with our system. Users use it. Ideally with joy. If there are problems with the system, the development team has to come back and, in the best case, just explain something. If it comes down to the wire, maybe even fix something.</p>
+<p>Our company wants to make cash with the system. If this occurs in combination with satisfied customers, this would of course be a double bingo. At the same time, such a company also likes to express its wishes to the team (are then these ominous boundary conditions, e.g. business goals, budget, trends, etc.). &hellip;) and thus also has an influence on the actual application.</p>
+<p>All these factors shape the product and must be taken into account in the architecture.</p>
+<hr>
+<h2 id="architecture-is-a-lived-value">
+  Architecture is&hellip; a lived value!
+  <a class="heading-link" href="#architecture-is-a-lived-value">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>We don&rsquo;t want finished plans from the drawing board. As I said: Architecture evolves. We have to take care of this. This is only and exclusively possible if our ideas undergo a regular reality check - even if only half-finished. Our understanding is not that of others. That&rsquo;s why we have to get feedback from as many sides as possible, i.e. as many stakeholders as possible. Regularly.</p>
+<hr>
+<h2 id="summary">
+  Summary
+  <a class="heading-link" href="#summary">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Is architecture something that every developer should be able to do? Sure. The question is: Does a developer even want to consider this always and permanently in his daily work? I mean no. Many factors (time, money, knowledge, <em>pragmatism</em>&hellip;) usually lead to the fact that just these conceptual tasks fall under the table, if one should not direct his attention specifically to it.</p>
+<p>Do we need a dedicated architect in the team? Basically not. But we need an understanding and acceptance of the necessity of the role.</p>
+<hr>
+<p>(deutsch)</p>
+<h2 id="der-architekt-der-nicht-nur-entwickler-ist">
+  Der Architekt, der nicht nur Entwickler ist.
+  <a class="heading-link" href="#der-architekt-der-nicht-nur-entwickler-ist">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Letztens sagte ein CTO-Mensch in einem Gespräch zu mir, nachdem ich zu ihm meinte, meine Leidenschaft sei die <code>Software Architektur</code>:</p>
+<blockquote>
+<p>Aber jeder Entwickler sollte doch über Architektur Bescheid wissen, das ist ja nichts, was <em>extra</em> gemacht werden muss&hellip;</p>
+</blockquote>
+<p><em>Liebe Produktmanager, liebe CTOs:</em>
+Doch, leider ist Software Architektur etwas, das <em>extra</em> gemacht werden muss.</p>
+<p><!-- raw HTML omitted --> Software Architektur geht über OOP hinaus. Es ist nichts, was man nur einmal macht und dann nie wieder anfässt. Architektur ist immer ganzheitlich. Architektur evolviert. Der Softwarearchitekt möchte nicht nur ein schönes System entwerfen, er möchte es auch stabil, sprich langlebig aufstellen. Er ist Gestalter und Statiker zugleich.</p>
+<p>Macht man das nebenher? Aus Kostensicht gesehen, wäre es wohl schön, wenn dem so wäre. Die Erfahrung lehrt uns jedoch etwas anderes&hellip;</p>
+<p>Dieser Post möchte einmal das unbekannte Wesen, den &ldquo;<em>Softwarearchitekten</em>&rdquo; beleuchten und einen kurzen Abriss über diese ominöse &ldquo;<em>Softwarearchitektur</em>&rdquo; geben.</p>
+<p>Disclaimer vornweg: Dies spiegelt natürlich nur meine subjektive Ansicht wieder. Da es keine allgemeingültige Definition beider Begriffe gibt (sic!), ist das Folgende natürlich nur <em>eine</em> Meinung von vielen. Auch garantiere ich nicht, dass ich in ein paar Jahren etwas komplett anderes darüber erzählen werde :)</p>
+<hr>
+<h2 id="das-ziel-des-architekten">
+  Das Ziel des Architekten
+  <a class="heading-link" href="#das-ziel-des-architekten">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Der Architekt mag <code>Qualität</code>.</p>
+<p>Er spürt sie in den Anforderungen der Requirement Ingenieure auf und weiß, dass ein System neben Funktion auch Qualität haben muss.
+Wie der zivile Architekt, möchte der Softwarearchitekt etwas bauen, dass in Funktion und Aufbau den Bedürfnissen der Anwender entspricht und am besten über einen langen Zeitraum Beständigkeit aufweist.
+Ein System soll nicht nur funktionieren. Es soll <em>gut</em> funktionieren.</p>
+<p>Das Problemen mit technischen Systemen ist jedoch, dass diese schneller verfaulen können als Fallobst im warmen Spätherbst. Und wenn man nicht aufpasst, dann ist in einem System irgendwann, im wahrsten Sinne des Wortes, der Wurm drin (und damit ist die maximale Anzahl schlechter Wortspiele auch für diesen Text erreicht&hellip; :)).
+Dass Systeme erodieren, steht außer Frage. Die Frage ist, wie schnell dies passiert. Dies zu steuern, obliegt ebenfalls dem Aufgabenbereich des Architekten.</p>
+<p>Der Architekt will also nicht nur erschaffen, er will auch erhalten. Er ist Bauherr, Restaurator und Anti-Aging-Manager eines Systems.
+(<em>Und, weil er auch den CTO mag, will er natürlich die Qualität des Systems unter kalkulierbaren, möglichst konstanten Kosten aufrecht erhalten.</em>)</p>
+<hr>
+<h2 id="_die_-architektur">
+  <em>DIE</em> Architektur
+  <a class="heading-link" href="#_die_-architektur">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Allem voran: Es gibt nicht <em>die</em> Architektur. Systeme sind wie lebende Organismen. Individuell und mit Marotten. Versucht man hier ein <em>Ein-für-Alles</em> wird man sehr schnell scheitern. Genauso wie sich Systeme verändern, muss sich auch die Architektur verändern.</p>
+<p>Hierbei ist die Liste der Einflussfaktoren auf eine Architektur annähernd unlimitert.</p>
+<p>Einige Beispiele:</p>
+<ul>
+<li>Wo befindet sich das Unternehmen? Ein StartUp setzt in der Architektur einen anderen Schwerpunkt als ein etabliertes Unternehmen</li>
+<li>Wo befindet sich das Produkt?</li>
+<li>Wie ist das Unternehmen strukturiert?</li>
+<li>Wie schaut das Team für ein Produkt aus?</li>
+<li>&hellip;</li>
+</ul>
+<p>Gute Architektur passt sich den unterschiedlichen Gegebenheiten an.</p>
+<p>Ein guter Architekt erkennt die Zeichen der Zeit und setzt die Leitplanken für notwendige Maßnahmen für die Evolution der Architektur.</p>
+<h2 id="architektur-ein-definitionversuch">
+  Architektur: Ein Definitionversuch
+  <a class="heading-link" href="#architektur-ein-definitionversuch">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Leider gibt es für Softwarearchitektur keine allgemeingültige Definition. Wir versuchen es aber trotzdem mal&hellip;</p>
+<h4 id="erster-versuch-iso">
+  Erster Versuch: ISO
+  <a class="heading-link" href="#erster-versuch-iso">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>ISO-Standarde sind eigentlich immer gut, um Dinge zu definieren. Deswegen zu Beginn der <em>ISO/IEC 42010:2007</em> .
+Da heißt es:</p>
+<blockquote>
+<p>[Architecture is ]The fundamental organization of a system, embodied in its components, their relationships to each other and to the environment, and the principles guiding its design and evolution.</p>
+</blockquote>
+<p>Also Softwarearchitektur organisiert etwas im Inneren und verbindet etwas mit dem Außen. Sie stellt Prinzipien als Richtlinieren auf, die Einfluss auf das Design und die Entwicklung des Systems haben.</p>
+<p>Soweit nicht schlecht&hellip;</p>
+<h4 id="zweiter-versuch-martin-fowler">
+  Zweiter Versuch: Martin Fowler
+  <a class="heading-link" href="#zweiter-versuch-martin-fowler">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p><em>Martin Fowler</em> sagte einmal, dass Architektur&hellip;</p>
+<blockquote>
+<p>all die Entscheidungen sind, die es nur schwer zu ändern gilt.</p>
+</blockquote>
+<p>Auch sehr gut!</p>
+<h4 id="dritter-versuch-weiteres">
+  Dritter Versuch: Weiteres&hellip;
+  <a class="heading-link" href="#dritter-versuch-weiteres">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Anderer Ansichten sehen die Architektur als Brücke zwischen dem Requirement Engineering und der tatsächlichen Umsetzung.
+Architektur umfasst dabei die initiale Erstellung als auch die langfristige Weiterentwicklung des Systems.</p>
+<h4 id="butter-bei-der-fische-architektur-ist-also">
+  Butter bei der Fische: Architektur ist also&hellip;
+  <a class="heading-link" href="#butter-bei-der-fische-architektur-ist-also">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>&hellip; irgendwie all das.
+Sie schlägt die Brücke zwischen der Theorie (Fachlichkeit) und der tatsächlichen Übersetzung in Code. Um diese Brücke schlagen zu können, müssen wesentliche Merkmale destilliert werden. Kennt man das Systemrelevante in Funktion und Qualität, kann man auch Struktur und Ordnung hineinbringen.
+Sowas erfordert Gehirnschmalz und ist daher, wie so oft bei Aufgaben, die Gehirnschmalz fordern, nicht mal eben kurzfristig mach- geschweige denn schnell mal revidierbar.</p>
+<hr>
+<h2 id="architektur-im-enterprise-umfeld">
+  Architektur im Enterprise Umfeld
+  <a class="heading-link" href="#architektur-im-enterprise-umfeld">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Michael Keeling sagte in seinem Buch <a href="https://amzn.eu/d/jdcArBr"  class="external-link" target="_blank" rel="noopener">Design it!</a>, dass Software stets in einem Systemkontxt lebt. System (altgriechisch sýstēma) ist laut <a href="https://de.wikipedia.org/wiki/System"  class="external-link" target="_blank" rel="noopener">Wikipedia</a> ein&hellip;:</p>
+<blockquote>
+<p>&hellip;<em>aus mehreren Einzelteilen zusammengesetztes Gan</em>zes</p>
+</blockquote>
+<p>Wir müssen als Techis jedoch aufpassen: System ist hier nicht nur technisch, sondern auch sozial zu denken.</p>
+<p>Klar, technisch bildet unsere Sofware ein System. Das läuft irgendwo und wird irgendwie von irgend jemanden betrieben. Es tauscht Daten mit anderen Systemen aus und wird von uns als Team entwickelt.</p>
+<p>Blöderweise gibt es noch ein &ldquo;<em>da draußen</em>&rdquo;, das auch irgendwie mit unserem System interagiert. Anwender nutzen es. Idealerweise mit Freude. Gibt es Probleme mit dem System, muss das Entwicklerteam wieder anrücken und im besten Fall nur etwas erklären. Wenn es spitz auf Knopf kommt vielleicht aber sogar etwas fixen.</p>
+<p>Unser Unternehmen will Cash mit dem System machen. Tritt das in Kombination mit zufriedenen Kunden auf, wäre dies natürlich ein Doppelbingo. Gleichzeitig äußert so ein Unternehmen auch mal gerne <em>seine</em> Wünsche an das Team (sind dann diese ominösen <em>Randbedingungen</em>, z.B. Geschäftsziele, Budget, Trends, etc. &hellip;) und hat somit auch Einfluss auf die eigentliche Anwendung.</p>
+<p>All diese Faktoren shapen das Produkt und müssen in der Architektur berücksichtigt werden.</p>
+<hr>
+<h2 id="architektur-ist-ein-gelebter-wert">
+  Architektur ist&hellip; ein gelebter Wert!
+  <a class="heading-link" href="#architektur-ist-ein-gelebter-wert">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Wir wollen keine fertigen Pläne vom Reißbrett. Wie gesagt: Architektur evolviert. Dem müssen wir Sorge tragen. Dies ist nur und ausschließlich möglich, wenn sich unsere Ideen einem regelmäßigen Realitätscheck unterziehen &ndash; auch wenn nur halbfertig. Unser Verständnis ist nicht das der anderen. Daher müssen wir Feedback einholen, von möglichst vielen Seiten, sprich möglichst vielen Stakeholdern. Regelmäßig.</p>
+<hr>
+<h2 id="zusammenfassung">
+  Zusammenfassung
+  <a class="heading-link" href="#zusammenfassung">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Ist Architektur also etwas, dass jeder Entwickler können sollte? Klar. Die Frage ist: Will ein Entwickler dies überhaupt immer und permanent in seiner täglichen Arbeit berücksichtigen? Ich meine nein. Viele Faktoren (Zeit, Geld, Wissen, <em>Pragmatismus</em>&hellip;) führen meist dazu, dass gerade diese konzeptuellen Aufgaben unterm Tisch fallen, sollte man nicht gezielt seine Aufmerksam darauf richten.</p>
+<p>Brauchen wir einen dedizierten Architekten im Team? Im Grunde nicht. Wir brauchen aber ein Verständnis und die Akzeptanz über die Notwendigkeit der Rolle.</p>
+
+      </div>
+
+
+      <footer>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2023
+     Jenka 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/blog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7QHVTGBQ8W"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-7QHVTGBQ8W', { 'anonymize_ip': false });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

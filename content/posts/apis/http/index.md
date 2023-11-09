@@ -75,7 +75,7 @@ After this brief introduction to the basics of `HTTP`, let's now summarize the a
 | Widely accepted                                            | Tighter coupling                                                                                          |
 | Standard exchange formats, like XML, JSON...               |                                                                                                           |
 | Strong focus on server side logic , low demand on consumer |                                                                                                           |
-| API description support by tools, like OpenAPI/Swagger                                              |                                                                                                           |
+| API description support by tools, like OpenAPI/Swagger     |                                                                                                           |
 
 ### Attention
 `It's contrary to common practice, BUT: Avoid using this type of API style for public APIs that you need to maintain over time.`
