@@ -59,15 +59,5 @@ Idea Link to heading The base idea behind HTTP is that we use the magic that the
 gRPC, HttP ReST graphQL </description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://codingjenka.github.io/blog/posts/pluralsight/modern_software_architecture/ddd/modernsoftwarearchitecture/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingjenka.github.io/blog/posts/pluralsight/modern_software_architecture/ddd/modernsoftwarearchitecture/</guid>
-      <description>Discovering the domain architecture through DDD Link to heading Ubiquitous language Link to heading = shared glossary of terms that stakeholders use in all spoken and written communication
-avoiding miss-understanding vocabulary understand by all parties of the project Sync: Changes of languages leads to changes in the code looking for nouns and verbs in the user story written in official natural language of the project make sure, that in a field of lot domain logic everything is covered use, when business logic is not defined in total Bounded Contextes Link to heading delimited space where all elements of the ubiq.</description>
-    </item>
-    
   </channel>
 </rss>
